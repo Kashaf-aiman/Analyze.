@@ -9,18 +9,22 @@ import {
     ListItemButton,
     ListItemIcon,
     ListItemText,
-    
+    IconButton
 } from '@mui/material'
 import Logo from './Logo';
 import {navbarList, navbarList1} from './SideBarItems';
 import '../../App.css';
 import SAvatar from './Avatar';
+import {DrawerContext} from '../../App';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+
 
 
 const drawerWidth = 240;
 
 
-const Sidebar = () => {
+const Sidebar = ({variant}) => {
+    const {open,toggleDrawer} = React.useContext(DrawerContext);
 
     const drawerContent = (
         <>
@@ -33,14 +37,12 @@ const Sidebar = () => {
                 backgroundColor: 'transparent',
                 margin: '10px 10px',
                 padding: '10px 0px',
-                // borderBottom: '1px solid lightgray',
                 alignItems: 'flex-end',
             }}
             >
             <Box
                 sx={{
                     flexShrink: 0,
-                    display:  { xs: 'none', sm: 'initial' } ,
                     marginBottom: '9px',
                     marginLeft: '9px',
                 }}
@@ -52,7 +54,6 @@ const Sidebar = () => {
                 noWrap={true}
                 gutterBottom
                 sx={{
-                    display: { xs: 'none', sm: 'initial' },
                     fontSize: '20px',
                     fontWeight: 600,
                     color: '#8676ff',
@@ -63,6 +64,14 @@ const Sidebar = () => {
             >
                 Analyze.
             </Typography>
+            <IconButton
+            size="large"
+            edge="start"
+            sx={{display:{xs:'flex', md:'none'}, mr: 2, color: '#7d7d98' }}
+            onClick={() => { toggleDrawer(!open) }}
+            >
+                <CloseOutlinedIcon />
+            </IconButton>
         </Box>
         <List dense={true}>
         {navbarList.map((key, index) => (
@@ -207,20 +216,10 @@ const Sidebar = () => {
                 </ListItemButton>
         ))}
     </List>
-    {/* <Box
-        sx= {{
-            marginTop:'160px',
-        }}
-        >
-    <Divider variant="middle" light={true} />
-    </Box> */}
     
     <Box
         sx={{
             display: 'flex',
-            // justifyContent: 'flex-start',
-            // alignItems: 'center',
-            // alignContents: 'center',
             margin:'0px 14px',
             marginTop:'99px',
             padding: '8px 4px',
@@ -234,10 +233,13 @@ const Sidebar = () => {
     );
 
 return (
-    <Box sx={{ display: 'flex',position: 'static'}}>
+    <Box sx={{ display: 'flex',}}>
     <Drawer
-        variant="permanent"
+        variant={variant}
+        anchor={'left'}
+        open={open}
         sx={{
+            minWidth:"220px",
             width: drawerWidth,
             flexShrink: 0,
             '& .MuiDrawer-paper': {

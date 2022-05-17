@@ -27,7 +27,7 @@ return (
                 <Box>
                     <Box
                         sx={{ color: props.status ==='increase'? "#29cea1" : '#ff708b' , backgroundColor: "#f8f9fb", borderRadius: "5px", padding: "5px" }} >
-                       { props.status==='increase'? <FiArrowUpRight />: <FiArrowDownRight/>}
+                        { props.status==='increase'? <FiArrowUpRight />: <FiArrowDownRight/>}
                     </Box>
                 </Box>
             </Box>
@@ -55,5 +55,5 @@ return (
             </Box>
         </Box>
 </Grid>
-  );
+);
 }

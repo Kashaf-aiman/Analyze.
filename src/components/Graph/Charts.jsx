@@ -8,7 +8,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 export default function Charts() {
 
     return (
-        <Box sx={{marginLeft:'75px',marginBottom:"20px",width:'75.7rem'}}>
+        <Box sx={{marginLeft:'75px',marginBottom:"20px"}}>
             <Grid container spacing={5}>
                 <Grid item xs={12} md={7} lg={8}>
                     <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px" }}>

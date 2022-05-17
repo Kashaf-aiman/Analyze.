@@ -11,12 +11,13 @@ import {
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import {FiSearch} from 'react-icons/fi';
 import { Search,SearchIconWrapper,StyledInputBase,StyledToggleButtonGroup } from './NavBarElements';
-
-
-const drawerWidth = 240;
+import { DrawerContext } from '../../App';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 
 
 const NavBar = () => {
+  const { open, toggleDrawer } = React.useContext(DrawerContext);
   const [alignment, setAlignment] = React.useState('English');
 
   const handleChange = (event, newAlignment) => {
@@ -25,21 +26,28 @@ const NavBar = () => {
 
   return (
     <AppBar
-    position="fixed"
-      sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px`,
-            height: '65px',
-            // position:'static',
-            margin: '0px',
-            padding: '0px 10px',
-            backgroundColor: 'white',
+    position="static"
+    elevation={1}
+    sx={{
+      backgroundColor: 'white',
             boxShadow: 'none',
-            borderBottom: '1px solid lightgray',
-            justifyContent:'space-between'
+            borderBottom:'1px solid lightgray'
       }}
     >
           <Toolbar sx = {{
             display: 'flex',
           }}>
+            <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              edge="start"
+              sx={{ mr: 2, color: '#7d7d98' }}
+              onClick={() => { toggleDrawer(!open) }}
+              
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
           <StyledToggleButtonGroup
                       color='standard'
                       size="small"
@@ -47,8 +55,8 @@ const NavBar = () => {
                       exclusive
                       onChange={handleChange}
                       sx = {{
-                        marginLeft:'10px',
-                        marginRight:'6px',
+                        ml:'10px',
+                        mr:'6px',
                         justifyContent: 'center',
                         width:'80px',
                         height:'40px',
@@ -66,23 +74,20 @@ const NavBar = () => {
 
           <Box sx={{ 
                       color:'gray',
-                      margin:'15px 900px',
-                      // padding: '0 10px',
-                      display: { xs: 'none', sm: 'flex'},
+                      margin:'5px 59rem',
+                      display: { xs: 'flex', sm: 'flex'},
                       position:'absolute',
                       justifyContent: 'space-between',
                       alignItems: 'center',
                       }}>
           <IconButton style = {{ marginRight: '2px' }}>
-
-            <Badge variant="dot" overlap="circular" badgeContent="" sx={{ 
-              marginRight:'2px',
-              "& .MuiBadge-badge": { 
-                backgroundColor:'#ff5757',
-                color:'#ff5757'
-              } 
-          
-          }}><NotificationsNoneOutlinedIcon /></Badge>
+              <Badge variant="dot" overlap="circular" badgeContent="" sx={{ 
+                marginRight:'2px',
+                "& .MuiBadge-badge": { 
+                  backgroundColor:'#ff5757',
+                  color:'#ff5757'
+                } 
+            }}><NotificationsNoneOutlinedIcon /></Badge>
           </IconButton>
             <Search >
             <SearchIconWrapper>

@@ -3,35 +3,17 @@
   width:22.5px;
 }
 
-.ListItem {
-  font-weight: 100px;
-}
 
-/* .App {
-  font-family: sans-serif;
-  text-align: center;
-} */
 
-.WelcomeMessage {
-  /* position: relative; */
-  display:inline-block;
-  /* width:55rem; */
-  margin:90px 65px;
-  padding:10px 10px;
-  align-self:center;
-  
-  background-color: black;
-  
-  
-}
 .buttonGroup {
-  position:absolute;
-  margin-left: 57.5rem;
-  font-size: 10px; 
+  
+  
+  /* font-size: 10px;  */
   /* background-color: rgb(109, 52, 52); */
-  width:300px;
-  height: 60px;
-  flex-direction: row;
+  
+  height: 40px;
+  display:flex;
+  /* flex-direction: row; */
   
  
 }
