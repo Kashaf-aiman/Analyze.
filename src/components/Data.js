@@ -82,7 +82,7 @@ export const OrderListData = [
         priceperunit: "$2,102.00",
         quantity: "x 10",
         totalprice: "$21,020.00",
-        img: "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605331296/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/8934481002526.png/mxw_2048,f_auto"
+        img: "https://m.media-amazon.com/images/I/71TSinb4usL._AC_SL1500_.jpg"
     },
     {
         product: {
@@ -101,7 +101,7 @@ export const OrderListData = [
         priceperunit: "$200.00",
         quantity: "x 20",
         totalprice: "$5,980.00",
-        img: "https://images-eu.ssl-images-amazon.com/images/I/41nA0BEURrL._SY300_SX300_QL70_FMwebp_.jpg"
+        img: "https://filmphotography.eu/wp-content/uploads/2019/08/polaroid-originals-onestep-plus-sofortbildkamera.jpg"
     },
     {
         product: {
@@ -120,6 +120,6 @@ export const OrderListData = [
         priceperunit: "$2,102.00",
         quantity: "x 10",
         totalprice: "$21,020.00",
-        img: "https://d2d22nphq0yz8t.cloudfront.net/88e6cc4b-eaa1-4053-af65-563d88ba8b26/https://media.croma.com/image/upload/v1605331296/Croma%20Assets/Imaging/Camera%20and%20Camcorders/Images/8934481002526.png/mxw_2048,f_auto"
+        img: "https://m.media-amazon.com/images/I/71TSinb4usL._AC_SL1500_.jpg"
     },
 ];
