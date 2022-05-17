@@ -25,6 +25,7 @@ const NavBar = () => {
   }
 
   return (
+    <Box sx={{ flexGrow: 1 }}>
     <AppBar
     position="static"
     sx={{
@@ -66,16 +67,13 @@ const NavBar = () => {
                       <ToggleButton  value="Indonasian">ID</ToggleButton>
                     </StyledToggleButtonGroup>
                     
-                    <Typography sx={{ fontSize:'14px',color:'Gray',marginLeft:'4px'}}>{alignment}</Typography>
-          </Toolbar>
-
+                    <Typography sx={{ display:{xs:"none",md:"flex"},fontSize:'14px',color:'Gray',marginLeft:'4px'}}>{alignment}</Typography>
+                      
+          <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ 
                       color:'gray',
-                      margin:{xs:'2px 342px', md:'5px 56.5rem'},
-                      display: { xs: 'flex', sm: 'flex'},
-                      position:'absolute',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
+                      display: 'flex',
+                      alignItems: 'flex-end',
                       }}>
           <IconButton style = {{ marginRight: '2px' }}>
               <Badge variant="dot" overlap="circular" badgeContent="" sx={{ 
@@ -96,8 +94,9 @@ const NavBar = () => {
             />
           </Search>
           </Box>
+          </Toolbar> 
     </AppBar>
-    
+    </Box>
     
   )
 }

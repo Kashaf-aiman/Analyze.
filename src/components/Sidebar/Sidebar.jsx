@@ -215,20 +215,13 @@ const Sidebar = ({variant}) => {
                 )}
                 </ListItemButton>
         ))}
+
+            <Divider variant="middle" light={true} />
+        {/* <Box sx={{padding: '8px 14px',}}> */}
+        <SAvatar />
+    {/* </Box> */}
     </List>
     
-    <Box
-        sx={{
-            display: 'flex',
-            margin:'0px 14px',
-            marginTop:'99px',
-            padding: '8px 4px',
-            borderTop: '1px solid lightgray',
-            borderHeight: '1px',
-        }}
-        >
-        <SAvatar />
-    </Box>
     </>
     );
 

@@ -6,15 +6,12 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 export default function SAvatar() {
   return (
-    <Box sx={{position:'fixed',display:'flex',justifyContent:'space-between'}}>
+    <Box sx={{position:'fixed',display:'flex',flexDirection:'row',padding: '8px 14px',}}>
    
     <Box
     sx={{
-    position:'fixed',
-    display: 'flex',
-    marginRight: '18px',
+    position:'absolute',
     marginTop:'20px',
-    paddingLeft: '0px',
     alignItems: 'center',
     alignContent: 'center',
    
@@ -58,11 +55,12 @@ export default function SAvatar() {
     >
     Sr. Manager
     </Typography>
+    
 </Box>
-
 <IconButton contained sx={{ color: 'black',marginLeft: '20px',marginTop:'20px',}}>
     <KeyboardArrowDownOutlinedIcon />
 </IconButton>
+
     </Box>
 );
 }

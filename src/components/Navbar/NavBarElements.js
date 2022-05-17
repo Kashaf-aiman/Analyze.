@@ -7,6 +7,7 @@ import {
 
 export const Search = styled('div')(({ theme }) => ({
     position: 'relative',
+    display: 'flex',
     border: '1px solid lightgray',
     borderRadius: '10px',
     backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -14,10 +15,10 @@ export const Search = styled('div')(({ theme }) => ({
         backgroundColor: alpha(theme.palette.common.black, 0.02),
     },
     marginRigth: '0px',
-    width: '100%',
+    width: 'auto',
     [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(0.1),
-        width: '280px',
+        marginLeft: theme.spacing(3),
+        width: 'auto',
     },
     }));
     

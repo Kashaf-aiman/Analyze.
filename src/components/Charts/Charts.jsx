@@ -15,7 +15,7 @@ export default function Charts() {
                 {/* LineChart */}
                 
                 <Grid item xs={12} md={7} lg={8}>
-                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "10px 15px" }}>
+                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "5px 15px" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
                                 Sales Analytics
@@ -25,7 +25,8 @@ export default function Charts() {
                                     <MenuItem value={20}>Period: <Typography variant='body1' component='span' sx={{ color: "#383874", fontWeight: "bold",}}> This Month</Typography></MenuItem>
                                 </Select>
                         </Box>
-                        <ResponsiveContainer width="100%" height={243}>
+                       
+                        <ResponsiveContainer width="100%" height={253}>
                             <LineChart data={GraphData} >
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <XAxis dataKey="name" />
