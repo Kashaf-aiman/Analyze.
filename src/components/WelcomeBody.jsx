@@ -6,12 +6,11 @@ import '../App.css';
 // const drawerWidth = 240;
 
 
-const Welcome = () => {
+const WelcomeBody = () => {
 return (
     
     <Box sx={{ display: 'flex', justifyContent: "space-between", flexDirection: { xs: 'column', md: 'row' }, marginBottom: "20px" }}>
-        <Container sx={{
-        marginBottom:'20px'}}>
+        <Container >
             <Typography 
                 variant="h2"
                 sx={{
@@ -22,7 +21,7 @@ return (
             >Hi, Albert Tristian</Typography>
         <Typography 
                 variant="span" sx={{ fontSize:'17px', color:'lightgray',letterSpacing: '1px',justifyContent:'space-between' }}>
-                    welcome back to analyze
+                    WelcomeBody back to analyze
         </Typography>
         </Container>
     
@@ -30,7 +29,7 @@ return (
         <ButtonGroup class="buttonGroup" >
                 <Button 
                 variant="outlined" 
-                size="medium" 
+                size="small" 
                 disableRipple
                 disableElevation
                 endIcon={<BiShareAlt />}
@@ -38,15 +37,15 @@ return (
                 > Share</Button>
                 <Button 
                 variant="contained" 
-                size="medium"
+                size="small"
                 disableRipple
                 disableElevation
                 endIcon={<FiDownload/>}
-                sx={{textTransform:'capitalize',borderRadius: '4px',marginRight:'10px', borderColor: '#8676ff',padding: "5px 20px"}}
+                sx={{textTransform:'capitalize',borderRadius: '4px',marginRight:'10px', backgroundColor: '#8676ff',padding: "5px 20px"}}
                 >Export</Button>
         </ButtonGroup>
     </Box>
 )
 }
 
-export default Welcome
+export default WelcomeBody

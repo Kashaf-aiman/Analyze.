@@ -13,7 +13,7 @@ import {FiSearch} from 'react-icons/fi';
 import { Search,SearchIconWrapper,StyledInputBase,StyledToggleButtonGroup } from './NavBarElements';
 import { DrawerContext } from '../../App';
 import MenuIcon from '@mui/icons-material/Menu';
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
+
 
 
 const NavBar = () => {
@@ -27,7 +27,6 @@ const NavBar = () => {
   return (
     <AppBar
     position="static"
-    elevation={1}
     sx={{
       backgroundColor: 'white',
             boxShadow: 'none',
@@ -55,8 +54,6 @@ const NavBar = () => {
                       exclusive
                       onChange={handleChange}
                       sx = {{
-                        ml:'10px',
-                        mr:'6px',
                         justifyContent: 'center',
                         width:'80px',
                         height:'40px',
@@ -74,7 +71,7 @@ const NavBar = () => {
 
           <Box sx={{ 
                       color:'gray',
-                      margin:'5px 59rem',
+                      margin:{xs:'2px 342px', md:'5px 56.5rem'},
                       display: { xs: 'flex', sm: 'flex'},
                       position:'absolute',
                       justifyContent: 'space-between',

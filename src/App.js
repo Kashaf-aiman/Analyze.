@@ -3,10 +3,11 @@ import './App.css';
 import Sidebar from './components/Sidebar/Sidebar';
 import {Box,Stack} from '@mui/material';
 import NavBar from './components/Navbar/NavBar';
-import Welcome from './components/Welcome';
+import WelcomeBody from './components/WelcomeBody';
 import Card from './components/Cards/Card';
-import Charts from './components/Graph/Charts';
+import Charts from './components/Charts/Charts';
 import React, { useState } from 'react';
+import OrderListData from './components/OrderList/OrderList'
 
 export const DrawerContext = React.createContext();
 
@@ -28,9 +29,12 @@ function App() {
         
         <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)`}}>
         <NavBar />
-          <Welcome />
+        <Box sx={{ padding: '20px' }}>
+          <WelcomeBody />
           <Card />
           <Charts />
+          <OrderListData/>
+        </Box>
         </Stack>
       </Box>
       <Box
@@ -38,9 +42,12 @@ function App() {
         <Sidebar variant="temporary" />
         <Stack spacing={2} sx={{ width: '100%' }}>
         <NavBar />
-          <Welcome />
+        <Box sx={{ padding: '20px' }}>
+          <WelcomeBody />
           <Card />
           <Charts />
+          <OrderListData/>
+          </Box>
         </Stack>
       </Box>
       </DrawerContext.Provider>
