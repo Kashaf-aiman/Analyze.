@@ -10,7 +10,7 @@ export default function SAvatar() {
         <Box
             sx={{
             position:'relative',
-            padding:'10px 4px',
+            padding:'15px 4px',
             height:'40px'
             }}>
             <Box sx={{display:'flex', alignItems:'center'}}>
@@ -47,7 +47,7 @@ export default function SAvatar() {
                     </Typography>
                 </Box>  
             </Box>
-            <IconButton  sx={{ position:'absolute',left:'88%',bottom:'10px',minWidth:'50px',lineHeight:'50px',transform:'translateX(-50%)'}}>
+            <IconButton  sx={{ position:'absolute',left:'88%',bottom:'14px',minWidth:'50px',lineHeight:'50px',transform:'translateX(-50%)'}}>
                 <KeyboardArrowDownOutlinedIcon />
             </IconButton>
         </Box>
