@@ -6,60 +6,51 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 export default function SAvatar() {
   return (
-    <Box sx={{display:'flex',flexDirection:'row',padding: '0px 16px',}}>
-   
-    <Box
-    sx={{
-    position:'absolute',
-    marginTop:'20px',
-    alignItems: 'center',
-    alignContent: 'center',
-    }}
->
-
-    <Box>
-        <Avatar alt="Remy Sharp" sx={{ width: '32px', height: '32px' }}>
-        </Avatar>
-    </Box>
-</Box>
-
-<Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1,marginLeft: '45px',marginTop:'20px',}}>
-    <Typography
-    component="span"
-    variant="body2"
-    sx={{
-        // fontFamily: 'inherit',
-        display: 'block',
-        whiteSpace: 'nowrap',
-        lineHeight: 'inherit',
-        fontWeight: 600,
-        color: '#383874',
-        
-
-    }}
-    >
-    Albert Tristian
-    </Typography>
-    <Typography
-    component="span"
-    variant="body2"
-    sx={{
-        display: 'block',
-        fontSize: '13px',
-        whiteSpace: 'nowrap',
-        lineHeight: 'inherit',
-        marginTop:'3px',
-        color: '#44b700',
-    }}
-    >
-    Sr. Manager
-    </Typography>
-    
-</Box>
-<IconButton contained sx={{ color: 'black',marginLeft: '20px',marginTop:'20px',}}>
-    <KeyboardArrowDownOutlinedIcon />
-</IconButton>
-
+    <Box sx={{position:'absolute',left:'0',bottom:'0', width:'100%',borderTop:'1px solid lightgray'}}>
+        <Box
+            sx={{
+            position:'relative',
+            padding:'10px 4px',
+            height:'40px'
+            }}>
+            <Box sx={{display:'flex', alignItems:'center'}}>
+                <Avatar alt="Remy Sharp" sx={{marginLeft:'20px', width: '32px', height: '32px' }}></Avatar>
+                <Box sx={{  flexGrow: 1,marginLeft: '15px'}}>
+                    <Typography
+                    component="div"
+                    variant="div"
+                    sx={{
+                        whiteSpace: 'nowrap',
+                        fontSize:'15px',
+                        lineHeight: 'inherit',
+                        fontWeight: 600,
+                        color: '#383874',
+                        fontFamily:'sans-serif',
+                    }}
+                    >
+                    Albert Tristian
+                    </Typography>
+                    <Typography
+                    component="div"
+                    variant="body2"
+                    sx={{
+                        fontFamily:'sans-serif',
+                        display: 'block',
+                        fontSize: '13px',
+                        whiteSpace: 'nowrap',
+                        lineHeight: 'inherit',
+                        marginTop:'3px',
+                        color: '#44b700',
+                    }}
+                    >
+                    Sr. Manager
+                    </Typography>
+                </Box>  
+            </Box>
+            <IconButton  sx={{ position:'absolute',left:'88%',bottom:'10px',minWidth:'50px',lineHeight:'50px',transform:'translateX(-50%)'}}>
+                <KeyboardArrowDownOutlinedIcon />
+            </IconButton>
+        </Box>
     </Box>
 );
 }

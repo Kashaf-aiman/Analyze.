@@ -60,6 +60,7 @@ const Sidebar = ({variant}) => {
                     width: '174px',
                     marginLeft:'10px',
                     paddingBottom: '5px',
+                    fontFamily:'sans-serif',
                 }}
             >
                 Analyze.
@@ -111,6 +112,7 @@ const Sidebar = ({variant}) => {
                     display: 'inline',
                     margin: '0px',
                     overflowX: 'hidden',
+                    fontFamily:'sans-serif',
                     color: 'lightgray',
                     fontWeight: 'Medium',
                     whiteSpace: 'nowrap',
@@ -152,6 +154,7 @@ const Sidebar = ({variant}) => {
                 sx={{
                     display: { xs: 'none', sm: 'initial' },
                     fontSize: '12px',
+                    fontFamily:'sans-serif',
                     color: 'lightgray',
                     width: '174px',
                     marginLeft:'20px',
@@ -192,6 +195,7 @@ const Sidebar = ({variant}) => {
                     variant: 'body2', 
                     }}
                     sx={{
+                    fontFamily:'sans-serif',
                     display: 'inline',
                     margin: '0px',
                     overflowX: 'hidden',
@@ -217,12 +221,8 @@ const Sidebar = ({variant}) => {
                 )}
                 </ListItemButton>
         ))}
-    <Box sx={{flexGrow:'1'}}/>
-            <Divider variant="middle" light={true} />
-        {/* <Box sx={{padding: '8px 14px',}}> */}
-        <SAvatar />
-    {/* </Box> */}
     </List>
+    <SAvatar />
     
     </>
     );

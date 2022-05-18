@@ -23,33 +23,31 @@ function App() {
   }
   return (
     <DrawerContext.Provider value={{ open, toggleDrawer }}>
-    <Box
-        sx={{ display: { xs: 'none', md: 'flex' } }}>
-        <Sidebar variant="permanent" />
-        
-        <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)`}}>
-        <NavBar />
-        
-        <Box sx={{ padding: '20px' }}>
-        <WelcomeBody />
-          <Card />
-          <Charts />
-          <OrderListData/>
-        </Box>
-        </Stack>
-      </Box>
-      <Box
-        sx={{ display: { xs: 'flex', md: 'none' } }}>
-        <Sidebar variant="temporary" />
-        <Stack spacing={2} sx={{ width: '100%' }}>
-        <NavBar />
-        <Box sx={{ padding: '20px' }}>
-          <WelcomeBody />
-          <Card />
-          <Charts />
-          <OrderListData/>
+      <Box 
+          sx={{ display: { xs: 'none', md: 'flex' } }}>
+          <Sidebar variant="permanent" />
+          <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)`}}>
+          <NavBar />
+          <Box sx={{ padding: '20px' }}>
+            <WelcomeBody />
+            <Card />
+            <Charts />
+            <OrderListData/>
           </Box>
-        </Stack>
+          </Stack>
+      </Box>
+      <Box 
+          sx={{ display: { xs: 'flex', md: 'none' } }}>
+          <Sidebar variant="temporary" />
+          <Stack spacing={2} sx={{ width: '100%' }}>
+          <NavBar />
+          <Box sx={{ padding: '20px' }}>
+            <WelcomeBody />
+            <Card />
+            <Charts />
+            <OrderListData/>
+            </Box>
+          </Stack>
       </Box>
       </DrawerContext.Provider>
     

@@ -88,26 +88,26 @@ export default function Charts() {
                         </ResponsiveContainer>
 
                         <Box sx={{ position: "absolute", left: "50%", top: "140px", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center" }}>
-                            <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "12px"}}>
+                            <Typography variant='h6' component='h6' sx={{  fontFamily:'sans-serif',color: "#a7a7c2", fontSize: "12px"}}>
                                 TOTAL SALES
                             </Typography>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{ fontFamily:'sans-serif', color: "#383874", fontSize: "21px", fontWeight: 'bold' }}>
                                 3,234
                             </Typography>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "10px", fontWeight: 'bold' }}>
-                                <img src={logo} alt="" style={{ height: "12px", width: "12px" }} /> Products
+                                <img src={logo} alt="" style={{  fontFamily:'sans-serif',height: "12px", width: "12px" }} /> Products
                             </Typography>
                         </Box>
-                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", marginTop: "40px" }}>
-                            <Box sx={{ borderTop: "5px solid #21cc9e", padding: "10px 0" }} >
-                                <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "13px" }}>
+                        <Box sx={{ padding:'0px 60px', display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", marginTop: "40px" }}>
+                            <Box sx={{ borderTop: "5px solid #21cc9e", padding: "10px 0px" }} >
+                                <Typography variant='h6' component='h6' sx={{ fontFamily:'sans-serif', color: "#a7a7c2", fontSize: "13px" }}>
                                     E-Commerce
                                 </Typography>
                                 <Typography variant='h5' component='h5' sx={{ color: "#383874", fontSize: "20px", fontWeight: 'bold' }}>
                                     1,618
                                 </Typography>
                             </Box>
-                            <Box sx={{ borderTop: "5px solid #8676ff", padding: "10px 0" }} >
+                            <Box sx={{ borderTop: "5px solid #8676ff", padding: "10px 0px" }} >
                                 <Typography variant='h6' component='h6' sx={{ color: "#a7a7c2", fontSize: "13px" }}>
                                     Facebook
                                 </Typography>
@@ -122,7 +122,7 @@ export default function Charts() {
                                 <Typography variant='h5' component='h5' sx={{ color: "#383874", fontSize: "20px", fontWeight: 'bold' }}>
                                     808
                                 </Typography>
-                            </Box>
+                            </Box> 
                         </Box>
                     </Box>
                 </Grid>

@@ -55,6 +55,7 @@ return (
                 transition: 'all 0.2s ease-in-out',
                 color: "#8676ff",
                 fontSize: "16px",
+                fontFamily:'sans-serif',
                 borderRadius:'5px',
                 '&:hover':{
                     backgroundColor:'#8676ff',

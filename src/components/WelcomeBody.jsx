@@ -17,10 +17,11 @@ return (
                     fontSize: '22px',
                     color:'#383874',
                     fontWeight:600,
+                    fontFamily:'sans-serif',
                 }}
             >Hi, Albert Tristian</Typography>
         <Typography 
-                variant="h6" sx={{ fontSize:'17px', color:'lightgray',letterSpacing: '1px',justifyContent:'space-between' }}>
+                variant="h6" sx={{ fontFamily:'sans-serif', fontSize:'17px', color:'lightgray',letterSpacing: '1px',justifyContent:'space-between' }}>
                     welcome back to analyze
         </Typography>
         </Container>
