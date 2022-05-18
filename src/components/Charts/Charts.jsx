@@ -23,7 +23,7 @@ export default function Charts() {
                 <Grid item xs={12} md={7} lg={8}>
                     <Box sx={{border: "1px solid #e4e4e4", borderRadius: "5px", padding: "5px 15px" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-                            <Typography variant='h5' component='h4' sx={{ padding:'5px 15px',color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
                                 Sales Analytics
                             </Typography>
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
