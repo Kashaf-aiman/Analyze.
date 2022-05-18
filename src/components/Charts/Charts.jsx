@@ -23,7 +23,7 @@ export default function Charts() {
                 <Grid item xs={12} md={7} lg={8}>
                     <Box sx={{border: "1px solid #e4e4e4", borderRadius: "5px", padding: "5px 15px" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
-                            <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
+                            <Typography variant='h5' component='h4' sx={{ padding:'5px 15px',color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
                                 Sales Analytics
                             </Typography>
                             <FormControl sx={{ m: 1, minWidth: 120 }}>
@@ -35,17 +35,17 @@ export default function Charts() {
                         </Box>
                        {/* <Box sx={{backgroundColor:'red'}}> */}
                         <ResponsiveContainer height={253}  >
-                            <AreaChart data={GraphData}margin={{top: 0,right: 10,left: 0,bottom: 20}} >
+                            <AreaChart data={GraphData} >
                                 <defs>
                                     <linearGradient id='color' x1='0' y1='0' x2='0' y2='1'>
                                         <stop offset='0%' stopColor="#8676ff" stopOpacity={0.9} />
                                         <stop offset='75%' stopColor="#8676ff" stopOpacity={0.08}/>
                                     </linearGradient>
                                 </defs>
-                                <CartesianGrid strokeDasharray="1 1" opacity={0.4}/>
-                                <XAxis interval={0} dataKey="name" axisLine={{stroke:'#cccccc'}} tick={{fill:'#c0c0c0' }} tickLine={false} />
-                                <YAxis dataKey="pv" unit="K" tickStyle  tickFormatter={num => `$${num}`} tick={{fill:'#c0c0c0'}} axisLine={{stroke:'#cccccc'}} tickLine={false} />
-                                <Tooltip content={<Custom />} cursor={false}/>
+                                <CartesianGrid strokeDasharray="0 0" opacity={0.2}/>
+                                <XAxis  dataKey="name" axisLine={{stroke:'#cccccc'}} tick={{fill:'#c0c0c0' }} tickLine={false} />
+                                <YAxis dataKey="pv" unit="K"  tickFormatter={num => `$${num}`} tick={{fill:'#c0c0c0'}} axisLine={{stroke:'#cccccc'}} tickLine={false} />
+                                <Tooltip content={<Custom />}  cursor={false}/>
                                 <Area type="monotone" dataKey="pv" stroke="#8676ff" fill =" url(#color)" strokeWidth={3} dot={false} fillOpacity={0.1}/>
                             </AreaChart>
                         </ResponsiveContainer>
