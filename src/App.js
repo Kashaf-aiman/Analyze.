@@ -29,8 +29,9 @@ function App() {
         
         <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)`}}>
         <NavBar />
+        
         <Box sx={{ padding: '20px' }}>
-          <WelcomeBody />
+        <WelcomeBody />
           <Card />
           <Charts />
           <OrderListData/>

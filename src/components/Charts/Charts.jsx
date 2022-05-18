@@ -1,11 +1,17 @@
 import React from 'react'
-import { Box, Grid, Typography, Select, MenuItem, IconButton } from '@mui/material';
+import { Box, Grid, Typography, Select, MenuItem, IconButton,FormControl } from '@mui/material';
 import logo from "./Logo.png";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Pie, PieChart, Cell } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Pie, PieChart, Cell } from 'recharts';
 import { GraphData, PieChartData } from '../Data';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 export default function Charts() {
+
+    const [value, setValue] = React.useState('10');
+
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
     return (
 
@@ -15,27 +21,36 @@ export default function Charts() {
                 {/* LineChart */}
                 
                 <Grid item xs={12} md={7} lg={8}>
-                    <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px", padding: "5px 15px" }}>
+                    <Box sx={{border: "1px solid #e4e4e4", borderRadius: "5px", padding: "5px 15px" }}>
                         <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "18px", fontWeight: 'bold' }}>
                                 Sales Analytics
                             </Typography>
-                                <Select>
+                            <FormControl sx={{ m: 1, minWidth: 120 }}>
+                                <Select  value={value} onChange={handleChange} displayEmpty>
                                     <MenuItem value={10} autoSelected>Period: <Typography variant='body1' component='span' sx={{ color: "#383874", fontWeight: "bold", }}> This Week</Typography></MenuItem>
                                     <MenuItem value={20}>Period: <Typography variant='body1' component='span' sx={{ color: "#383874", fontWeight: "bold",}}> This Month</Typography></MenuItem>
                                 </Select>
+                            </FormControl>
                         </Box>
-                       
-                        <ResponsiveContainer width="100%" height={253}>
-                            <LineChart data={GraphData} >
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis dataKey="name" />
-                                <YAxis dataKey="pv" unit="K" tickFormatter={num => `$${num}`} />
+                       {/* <Box sx={{backgroundColor:'red'}}> */}
+                        <ResponsiveContainer height={253}  >
+                            <AreaChart data={GraphData}margin={{top: 0,right: 10,left: 0,bottom: 20}} >
+                                <defs>
+                                    <linearGradient id='color' x1='0' y1='0' x2='0' y2='1'>
+                                        <stop offset='0%' stopColor="#8676ff" stopOpacity={0.9} />
+                                        <stop offset='75%' stopColor="#8676ff" stopOpacity={0.08}/>
+                                    </linearGradient>
+                                </defs>
+                                <CartesianGrid strokeDasharray="1 1" opacity={0.4}/>
+                                <XAxis interval={0} dataKey="name" axisLine={{stroke:'#cccccc'}} tick={{fill:'#c0c0c0' }} tickLine={false} />
+                                <YAxis dataKey="pv" unit="K" tickStyle  tickFormatter={num => `$${num}`} tick={{fill:'#c0c0c0'}} axisLine={{stroke:'#cccccc'}} tickLine={false} />
                                 <Tooltip content={<Custom />} cursor={false}/>
-                                <Line type="monotone" dataKey="pv" stroke="#8676ff" strokeWidth={3} dot={false}/>
-                            </LineChart>
+                                <Area type="monotone" dataKey="pv" stroke="#8676ff" fill =" url(#color)" strokeWidth={3} dot={false} fillOpacity={0.1}/>
+                            </AreaChart>
                         </ResponsiveContainer>
-                    </Box>
+                        </Box>
+                    {/* </Box> */}
                 </Grid>
                 
 
@@ -52,7 +67,7 @@ export default function Charts() {
                             </IconButton>
 
                         </Box>
-                        <ResponsiveContainer width="100%" height={120}>
+                        <ResponsiveContainer width="100%" height={141}>
                             <PieChart>
                                 {PieChartData.map((entry, index) => (
                                     <Pie

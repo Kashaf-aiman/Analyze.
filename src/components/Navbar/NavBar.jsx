@@ -75,12 +75,12 @@ const NavBar = () => {
                       display: 'flex',
                       alignItems: 'flex-end',
                       }}>
-          <IconButton style = {{ marginRight: '2px' }}>
+          <IconButton style = {{ marginRight: '2px', backgroundColor:'#F0F0F0' }} >
               <Badge variant="dot" overlap="circular" badgeContent="" sx={{ 
                 marginRight:'2px',
                 "& .MuiBadge-badge": { 
-                  backgroundColor:'#ff5757',
-                  color:'#ff5757'
+                  backgroundColor:'#ff6167',
+                  color:'#ff6167'
                 } 
             }}><NotificationsNoneOutlinedIcon /></Badge>
           </IconButton>

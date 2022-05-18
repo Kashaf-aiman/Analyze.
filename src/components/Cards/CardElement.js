@@ -1,9 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import {Grid,Divider, IconButton} from '@mui/material';
+import {Grid,Divider, CardActions} from '@mui/material';
 import {FiArrowUpRight,FiArrowDownRight} from 'react-icons/fi';
 import Typography from '@mui/material/Typography';
-import {CgChevronDoubleRight} from 'react-icons/cg';
+// import {CgChevronDoubleRight} from 'react-icons/cg';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 
 
@@ -11,7 +12,20 @@ export  const Cards = (props) => {
 return (
 
     <Grid item xs={12} md={6} lg={4} >
-        <Box sx={{ border: "1px solid #e4e4e4", borderRadius: "5px" , '&:hover':{cursor:'pointer'}}}>
+        <Box sx={{ 
+            border: "1px solid #e4e4e4", 
+            borderRadius: "5px" ,
+            boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
+            transition: "all 0.2s ease-in-out",
+            '&:hover':{
+                cursor:'pointer',
+                transform: 'scale(1.01, 1.01)',
+                boxShadow:'0 2px 10px rgba(0, 0, 0, 0.1)',
+            },
+            '&:hover::after': {
+                opacity: '1',
+            }
+        }}>
             <Box sx={{ display: 'flex', justifyContent: "space-between", padding: "10px 15px" }}>
                 <Box>
                     <Typography variant='h6' component='span' sx={{ fontSize:"13px",color: "#a7a7c2",}}>
@@ -32,28 +46,27 @@ return (
                 </Box>
             </Box>
             <Divider />
-            
-            <Box 
+        
+            <CardActions
             sx={{ 
-            display: 'flex', 
-            justifyContent: "space-between", 
-            alignItems: 'center', 
-            padding: "5px 15px",
-            transition: 'all 0.2s ease-in-out',
-            '&:hover':{
-                backgroundColor:'#8676ff',
-            }
-            }}>
-                <Typography variant='h6' component='h6' sx={{ color: "#8676ff", fontSize: "15px",'&:hover':{color:'white',}}}>
-                    See Details
-                </Typography>
-                <IconButton sx={{'&:hover':{
-                        color:'white',
-            }}}>
-                <CgChevronDoubleRight />
-                </IconButton>
-            </Box>
-        </Box>
+                display:'flex', 
+                justifyContent: 'space-between',
+                alignItems: 'center', 
+                padding: "5px 15px",
+                transition: 'all 0.2s ease-in-out',
+                color: "#8676ff",
+                fontSize: "16px",
+                borderRadius:'5px',
+                '&:hover':{
+                    backgroundColor:'#8676ff',
+                    color:'white'
+                }}}
+            >
+                See Details
+                <KeyboardDoubleArrowRightIcon />
+            </CardActions>
+        
+    </Box>
 </Grid>
 );
 }

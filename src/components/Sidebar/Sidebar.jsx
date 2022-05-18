@@ -82,7 +82,8 @@ const Sidebar = ({variant}) => {
                     borderRadius: '8px',
                     transition: 'all 0.2s ease-in-out',
                     '&:hover': {
-                        backgroundColor: 'gray',
+                        backgroundColor: 'lightgray',
+                        color:'#8676ff'
                     
                     },
                 }}
@@ -97,7 +98,7 @@ const Sidebar = ({variant}) => {
                         color:'#ff5757'
                       } }}
                     > */}
-                    <key.icon sx={{ fontSize: '20px', color: 'ligthgray' }} />
+                    <key.icon sx={{ fontSize: '20px', color: 'gray' }} />
                     {/* </Badge> */}
                 </ListItemIcon>
     
@@ -124,7 +125,7 @@ const Sidebar = ({variant}) => {
                     sx={{width:'auto' ,
                         height: '20px' , 
                         marginRight: '30px',
-                        backgroundColor:'#ff5757'
+                        backgroundColor:'#ff6167'
                     }}
                     />
                 ) : (
@@ -168,9 +169,10 @@ const Sidebar = ({variant}) => {
                     padding: '10px',
                     borderRadius: '8px',
                     transition: 'all 0.2s ease-in-out',
-                    '&:hover': {
-                    backgroundColor: 'gray',
                     color:'#8676ff',
+                    '&:hover': {
+                    backgroundColor: 'lightgray',
+                    
                     },
                 }}
                 >
@@ -180,7 +182,7 @@ const Sidebar = ({variant}) => {
                     color="secondary"
                     variant="dot"
                     > */}
-                    <key.icon sx={{ fontSize: '20px', color: 'ligthgray' }} />
+                    <key.icon sx={{ fontSize: '20px', color: 'lightgray' }} />
                     {/* </Badge> */}
                 </ListItemIcon>
     
@@ -207,7 +209,7 @@ const Sidebar = ({variant}) => {
                     sx={{width:'auto' ,
                         height: '20px',
                         marginRight: '30px',
-                        backgroundColor:'#ff5757'
+                        backgroundColor:'#ff6167'
                     }}
                     />
                 ) : (
@@ -215,7 +217,7 @@ const Sidebar = ({variant}) => {
                 )}
                 </ListItemButton>
         ))}
-
+    <Box sx={{flexGrow:'1'}}/>
             <Divider variant="middle" light={true} />
         {/* <Box sx={{padding: '8px 14px',}}> */}
         <SAvatar />

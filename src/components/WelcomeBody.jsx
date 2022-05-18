@@ -9,7 +9,7 @@ import '../App.css';
 const WelcomeBody = () => {
 return (
     
-    <Box sx={{ display: 'flex', justifyContent: "space-between", flexDirection: { xs: 'column', md: 'row' }, marginBottom: "20px" }}>
+    <Box sx={{ display: 'flex', justifyContent: "space-between", flexDirection: { xs: 'column', md: 'row' }, marginBottom: "22px" }}>
         <Container >
             <Typography 
                 variant="h2"
@@ -20,8 +20,8 @@ return (
                 }}
             >Hi, Albert Tristian</Typography>
         <Typography 
-                variant="span" sx={{ fontSize:'17px', color:'lightgray',letterSpacing: '1px',justifyContent:'space-between' }}>
-                    WelcomeBody back to analyze
+                variant="h6" sx={{ fontSize:'17px', color:'lightgray',letterSpacing: '1px',justifyContent:'space-between' }}>
+                    welcome back to analyze
         </Typography>
         </Container>
     

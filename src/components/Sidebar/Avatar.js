@@ -6,7 +6,7 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 export default function SAvatar() {
   return (
-    <Box sx={{position:'fixed',display:'flex',flexDirection:'row',padding: '8px 14px',}}>
+    <Box sx={{display:'flex',flexDirection:'row',padding: '0px 16px',}}>
    
     <Box
     sx={{
@@ -14,7 +14,6 @@ export default function SAvatar() {
     marginTop:'20px',
     alignItems: 'center',
     alignContent: 'center',
-   
     }}
 >
 
