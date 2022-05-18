@@ -8,7 +8,6 @@ import {
     TableContainer,
     TableHead,
     TableRow,
-    Paper,
 
 
 } from '@mui/material';
@@ -17,7 +16,7 @@ import { OrderListData } from '../Data';
 export default function OrderList() {
     return (
         <Box>
-            <Typography component="h6" variant="h6" sx={{ fontSize:'20px',color: "#383874", fontWeight: "bold" }}>
+            <Typography component="h6" variant="h6" sx={{ padding: '0px 8px',fontSize:'18px',color: "#383874", fontWeight: "bold" }}>
                 Order List
             </Typography>
             <TableContainer  sx={{ maxHeight: 440 }}>

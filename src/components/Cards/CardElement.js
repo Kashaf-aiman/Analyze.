@@ -15,7 +15,6 @@ return (
         <Box sx={{ 
             border: "1px solid #e4e4e4", 
             borderRadius: "5px" ,
-            boxShadow: '0 1px 2px rgba(0, 0, 0, 0.1)',
             transition: "all 0.2s ease-in-out",
             '&:hover':{
                 cursor:'pointer',
