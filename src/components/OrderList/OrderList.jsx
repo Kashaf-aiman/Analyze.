@@ -20,7 +20,7 @@ export default function OrderList() {
             <Typography component="h6" variant="h6" sx={{ fontSize:'20px',color: "#383874", fontWeight: "bold" }}>
                 Order List
             </Typography>
-            <TableContainer component={Paper} sx={{ maxHeight: 440 }}>
+            <TableContainer  sx={{ maxHeight: 440 }}>
                 <Table sx={{ minWidth: 650 }} >
                     <TableHead>
                         <TableRow>
