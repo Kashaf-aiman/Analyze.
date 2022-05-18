@@ -82,7 +82,7 @@ const Sidebar = ({variant}) => {
                     borderRadius: '8px',
                     transition: 'all 0.2s ease-in-out',
                     '&:hover': {
-                        backgroundColor: 'lightgray',
+                        backgroundColor: 'gray',
                         color:'#8676ff'
                     
                     },
@@ -171,7 +171,7 @@ const Sidebar = ({variant}) => {
                     transition: 'all 0.2s ease-in-out',
                     color:'#8676ff',
                     '&:hover': {
-                    backgroundColor: 'lightgray',
+                    backgroundColor: 'gray',
                     
                     },
                 }}

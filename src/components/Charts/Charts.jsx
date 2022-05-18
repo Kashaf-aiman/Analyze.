@@ -44,7 +44,7 @@ export default function Charts() {
                                 </defs>
                                 <CartesianGrid strokeDasharray="0 0" opacity={0.2}/>
                                 <XAxis  dataKey="name" axisLine={{stroke:'#cccccc'}} tick={{fill:'#c0c0c0' }} tickLine={false} />
-                                <YAxis dataKey="pv" unit="K"  tickFormatter={num => `$${num}`} tick={{fill:'#c0c0c0'}} axisLine={{stroke:'#cccccc'}} tickLine={false} />
+                                <YAxis width={40} dataKey="pv" unit="K"  tickFormatter={num => `$${num}`} tick={{fill:'#c0c0c0'}} axisLine={{stroke:'#cccccc'}} tickLine={false} />
                                 <Tooltip content={<Custom />}  cursor={false}/>
                                 <Area type="monotone" dataKey="pv" stroke="#8676ff" fill =" url(#color)" strokeWidth={3} dot={false} fillOpacity={0.1}/>
                             </AreaChart>
