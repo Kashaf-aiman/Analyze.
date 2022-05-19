@@ -1,57 +1,50 @@
-
-import './App.css';
-import Sidebar from './components/Sidebar/Sidebar';
-import {Box,Stack} from '@mui/material';
-import NavBar from './components/Navbar/NavBar';
-import WelcomeBody from './components/WelcomeBody';
-import Card from './components/Cards/Card';
-import Charts from './components/Charts/Charts';
-import React, { useState } from 'react';
-import OrderListData from './components/OrderList/OrderList'
+import "./App.css";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { Box, Stack } from "@mui/material";
+import NavBar from "./components/Navbar/NavBar";
+import WelcomeBody from "./components/WelcomeBody";
+import Card from "./components/Cards/Card";
+import Charts from "./components/Charts/Charts";
+import React, { useState } from "react";
+import OrderListData from "./components/OrderList/OrderList";
 
 export const DrawerContext = React.createContext();
 
-const drawerWidth =240;
+const drawerWidth = 240;
 
 function App() {
+  const [open, setOpen] = useState(false);
 
-  const [open,setOpen] = useState(false);
-
-  const toggleDrawer = (open) =>  {
-   
-    setOpen((prev)=> open);
-  }
+  const toggleDrawer = (open) => {
+    setOpen((prev) => open);
+  };
   return (
     <DrawerContext.Provider value={{ open, toggleDrawer }}>
-      <Box 
-          sx={{ display: { xs: 'none', md: 'flex' } }}>
-          <Sidebar variant="permanent" />
-          <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)`}}>
+      <Box sx={{ display: { xs: "none", md: "flex" } }}>
+        <Sidebar variant="permanent" />
+        <Stack spacing={2} sx={{ width: `calc(100% - ${drawerWidth}px)` }}>
           <NavBar />
-          <Box sx={{ padding: '20px' }}>
+          <Box sx={{ padding: "20px" }}>
             <WelcomeBody />
             <Card />
             <Charts />
-            <OrderListData/>
+            <OrderListData />
           </Box>
-          </Stack>
+        </Stack>
       </Box>
-      <Box 
-          sx={{ display: { xs: 'flex', md: 'none' } }}>
-          <Sidebar variant="temporary" />
-          <Stack spacing={2} sx={{ width: '100%' }}>
+      <Box sx={{ display: { xs: "flex", md: "none" } }}>
+        <Sidebar variant="temporary" />
+        <Stack spacing={2} sx={{ width: "100%" }}>
           <NavBar />
-          <Box sx={{ padding: '20px' }}>
+          <Box sx={{ padding: "20px" }}>
             <WelcomeBody />
             <Card />
             <Charts />
-            <OrderListData/>
-            </Box>
-          </Stack>
+            <OrderListData />
+          </Box>
+        </Stack>
       </Box>
-      </DrawerContext.Provider>
-    
-   
+    </DrawerContext.Provider>
   );
 }
 

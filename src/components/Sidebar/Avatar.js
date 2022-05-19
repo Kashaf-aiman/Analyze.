@@ -1,56 +1,60 @@
-import * as React from 'react';
-import {Avatar,IconButton,Typography} from '@mui/material';
-import Box from '@mui/material/Box';
-import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-
+import * as React from "react";
+import { Avatar, Divider, IconButton, Typography } from "@mui/material";
+import Box from "@mui/material/Box";
+import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
 export default function SAvatar() {
-  return (
-    <Box sx={{position:'absolute',left:'0',bottom:'0', width:'100%',borderTop:'1px solid lightgray'}}>
+    return (
         <Box
             sx={{
-            position:'relative',
-            padding:'15px 4px',
-            height:'40px'
-            }}>
-            <Box sx={{display:'flex', alignItems:'center'}}>
-                <Avatar alt="Remy Sharp" sx={{marginLeft:'20px', width: '32px', height: '32px' }}></Avatar>
-                <Box sx={{  flexGrow: 1,marginLeft: '15px'}}>
+                height: "auto",
+                width: "100%",
+                position: "absolute", left: "0", bottom: "0",
+            }}
+        >
+            <Divider />
+            <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Avatar
+                    alt=""
+                    sx={{ marginLeft: "20px", width: "38px", height: "38px" }}
+                ></Avatar>
+                <Box sx={{ flexGrow: 1, marginLeft: "15px", padding: "10px 0" }}>
                     <Typography
-                    component="div"
-                    variant="div"
-                    sx={{
-                        whiteSpace: 'nowrap',
-                        fontSize:'15px',
-                        lineHeight: 'inherit',
-                        fontWeight: 600,
-                        color: '#383874',
-                        fontFamily:'sans-serif',
-                    }}
+                        component="div"
+                        variant="div"
+                        sx={{
+                            fontSize: "15px",
+                            fontWeight: 600,
+                            color: "#383874",
+                            fontFamily: "sans-serif",
+                        }}
                     >
-                    Albert Tristian
+                        Albert Tristian
                     </Typography>
                     <Typography
-                    component="div"
-                    variant="body2"
-                    sx={{
-                        fontFamily:'sans-serif',
-                        display: 'block',
-                        fontSize: '13px',
-                        whiteSpace: 'nowrap',
-                        lineHeight: 'inherit',
-                        marginTop:'3px',
-                        color: '#44b700',
-                    }}
+                        component="div"
+                        variant="body2"
+                        sx={{
+                            fontFamily: "sans-serif",
+                            fontSize: "13px",
+                            color: "#44b700",
+                        }}
                     >
-                    Sr. Manager
+                        Sr. Manager
                     </Typography>
-                </Box>  
+                </Box>
             </Box>
-            <IconButton  sx={{ position:'absolute',left:'88%',bottom:'14px',minWidth:'50px',lineHeight:'50px',transform:'translateX(-50%)'}}>
+            <IconButton
+                sx={{
+                    position: "absolute",
+                    right: "5px",
+                    bottom: "6px",
+                    minWidth: "50px",
+                    lineHeight: "50px",
+                }}
+            >
                 <KeyboardArrowDownOutlinedIcon />
             </IconButton>
         </Box>
-    </Box>
-);
+    );
 }

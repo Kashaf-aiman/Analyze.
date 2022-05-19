@@ -95,10 +95,10 @@ export default function Charts() {
                                 3,234
                             </Typography>
                             <Typography variant='h5' component='h4' sx={{ color: "#383874", fontSize: "10px", fontWeight: 'bold' }}>
-                                <img src={logo} alt="" style={{  fontFamily:'sans-serif',height: "12px", width: "12px" }} /> Products
+                                <img src={logo} alt="" style={{ height: "12px", width: "12px" }} /> Products
                             </Typography>
                         </Box>
-                        <Box sx={{ padding:'0px 60px', display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px", marginTop: "40px" }}>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px", marginTop: "60px" }}>
                             <Box sx={{ borderTop: "5px solid #21cc9e", padding: "10px 0px" }} >
                                 <Typography variant='h6' component='h6' sx={{ fontFamily:'sans-serif', color: "#a7a7c2", fontSize: "13px" }}>
                                     E-Commerce
