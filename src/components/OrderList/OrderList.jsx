@@ -8,10 +8,12 @@ import {
     TableContainer,
     TableHead,
     TableRow,
+    useTheme
 } from "@mui/material";
 import { OrderListData } from "../Data";
 
 export default function OrderList() {
+    const theme = useTheme();
     return (
         <Box>
             <Typography
@@ -20,7 +22,7 @@ export default function OrderList() {
                 sx={{
                     padding: "0px 8px",
                     fontSize: "18px",
-                    color: "#383874",
+                    color: theme.customTheme,
                     fontWeight: "bold",
                 }}
             >
@@ -31,37 +33,37 @@ export default function OrderList() {
                     <TableHead>
                         <TableRow>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 PRODUCT
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 ORDER DATE
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 STATUS
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 CUSTOMER
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 PRICE PER UNIT
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 QUANTITY
                             </TableCell>
                             <TableCell
-                                sx={{ minWidth: "100px", fontSize: "13px", color: "#a7a7c2" }}
+                                sx={{ minWidth: "100px", fontSize: "13px", color: theme.customTheme3 }}
                             >
                                 TOTAL PRICE
                             </TableCell>
@@ -89,7 +91,7 @@ export default function OrderList() {
                                                 <Typography
                                                     variant="body2"
                                                     component="h6"
-                                                    sx={{ color: "#a7a7c2", fontSize: "15px" }}
+                                                    sx={{ color:  theme.customTheme3, fontSize: "15px" }}
                                                 >
                                                     {row.product.id}
                                                 </Typography>
@@ -97,7 +99,7 @@ export default function OrderList() {
                                                     variant="body"
                                                     component="h4"
                                                     sx={{
-                                                        color: "#383874",
+                                                        color:  theme.customTheme,
                                                         fontSize: "15px",
                                                         fontWeight: "bold",
                                                     }}
@@ -111,7 +113,7 @@ export default function OrderList() {
                                         <Typography
                                             variant="body"
                                             component="body"
-                                            sx={{ color: "#a7a7c2", fontSize: "12px" }}
+                                            sx={{ color:  theme.customTheme3, fontSize: "12px" }}
                                         >
                                             {row.orderdate.time}
                                         </Typography>
@@ -119,7 +121,7 @@ export default function OrderList() {
                                             variant="body"
                                             component="body"
                                             sx={{
-                                                color: "#383874",
+                                                color:  theme.customTheme,
                                                 fontSize: "15px",
                                                 fontWeight: "bold",
                                             }}
@@ -132,7 +134,7 @@ export default function OrderList() {
                                             variant="body2"
                                             component="body"
                                             sx={{
-                                                color: row.status === "Success" ? "#29cea1" : "#ffc962",
+                                                color: row.status === "Success" ?  theme.customTheme4 :  theme.customTheme11,
                                                 fontSize: "15px",
                                                 backgroundColor:
                                                     row.status === "Success" ? "#d3f5ec" : "#fff3da",
@@ -148,7 +150,7 @@ export default function OrderList() {
                                             variant="body2"
                                             component="body"
                                             sx={{
-                                                color: "#383874",
+                                                color:  theme.customTheme,
                                                 fontSize: "15px",
                                                 fontWeight: "bold",
                                             }}
@@ -158,7 +160,7 @@ export default function OrderList() {
                                         <Typography
                                             variant="body2"
                                             component="body"
-                                            sx={{ color: "#a7a7c2", fontSize: "12px" }}
+                                            sx={{ color:  theme.customTheme3, fontSize: "12px" }}
                                         >
                                             {row.customer.location}
                                         </Typography>
@@ -168,7 +170,7 @@ export default function OrderList() {
                                             variant="body2"
                                             component="body"
                                             sx={{
-                                                color: "#383874",
+                                                color:  theme.customTheme,
                                                 fontSize: "15px",
                                                 fontWeight: "bold",
                                                 alignItems: "right",
@@ -182,7 +184,7 @@ export default function OrderList() {
                                             variant="body2"
                                             component="body"
                                             sx={{
-                                                color: "#383874",
+                                                color:  theme.customTheme,
                                                 fontSize: "15px",
                                                 fontWeight: "bold",
                                             }}
@@ -195,7 +197,7 @@ export default function OrderList() {
                                             variant="body2"
                                             component="bod"
                                             sx={{
-                                                color: "#21cc9e",
+                                                color:  theme.customTheme1,
                                                 fontSize: "185x",
                                                 fontWeight: "bold",
                                             }}

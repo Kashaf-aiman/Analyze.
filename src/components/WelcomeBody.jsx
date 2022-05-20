@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Container, Typography, Button, ButtonGroup } from '@mui/material';
+import { Box, Container, Typography, Button, ButtonGroup, useTheme } from '@mui/material';
 import { FiDownload } from 'react-icons/fi';
 import { BiShareAlt } from 'react-icons/bi';
 import '../App.css';
@@ -7,6 +7,7 @@ import '../App.css';
 
 
 const WelcomeBody = () => {
+const theme = useTheme();
     return (
         <Box sx={{ display: 'flex', justifyContent: "space-between", flexDirection: { xs: 'column', md: 'row' }, marginBottom: "22px" }}>
             <Container >
@@ -14,7 +15,7 @@ const WelcomeBody = () => {
                     variant="h2"
                     sx={{
                         fontSize: '22px',
-                        color: '#383874',
+                        color: theme.customTheme,
                         fontWeight: 600,
                         fontFamily: 'sans-serif',
                     }}

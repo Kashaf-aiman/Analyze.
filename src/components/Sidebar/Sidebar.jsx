@@ -11,6 +11,7 @@ import {
     ListItemText,
     IconButton,
     ListSubheader,
+    useTheme
 } from "@mui/material";
 import Logo from "./Logo";
 import { navbarList, navbarList1 } from "./SideBarItems";
@@ -23,9 +24,10 @@ const drawerWidth = 240;
 
 const Sidebar = ({ variant }) => {
     const { open, toggleDrawer } = React.useContext(DrawerContext);
+    const theme = useTheme();
 
     const drawerContent = (
-        <Box sx={{ overflowY: "auto"}}>
+        <Box sx={{ overflowY: "auto" }}>
             <List
                 dense={true}
                 subheader={
@@ -48,7 +50,7 @@ const Sidebar = ({ variant }) => {
                                 sx={{
                                     fontSize: "20px",
                                     fontWeight: 600,
-                                    color: "#8676ff",
+                                    color:  theme.customTheme2,
                                     width: "164px",
                                     marginLeft: "10px",
                                 }}
@@ -61,7 +63,7 @@ const Sidebar = ({ variant }) => {
                                 sx={{
                                     display: { xs: "flex", md: "none" },
                                     mb: "7px",
-                                    color: "#7d7d98",
+                                    color:  theme.customTheme7,
                                 }}
                                 onClick={() => {
                                     toggleDrawer(!open);
@@ -83,7 +85,7 @@ const Sidebar = ({ variant }) => {
                         }}
                     >
                         <ListItemIcon sx={{ minWidth: "36px" }}>
-                            <key.icon sx={{ fontSize: "20px", color: "#9e9e9e" }} />
+                            <key.icon sx={{ fontSize: "20px", color:  theme.customTheme8 }} />
                         </ListItemIcon>
 
                         <ListItemText
@@ -96,7 +98,7 @@ const Sidebar = ({ variant }) => {
                                 margin: "0px",
                                 overflowX: "hidden",
                                 fontFamily: "sans-serif",
-                                color: "#9e9e9e",
+                                color:  theme.customTheme8,
                                 fontWeight: "Medium",
                                 whiteSpace: "nowrap",
                                 minWidth: "126px",
@@ -111,7 +113,7 @@ const Sidebar = ({ variant }) => {
                                     width: "auto",
                                     height: "21px",
                                     margin: "auto",
-                                    backgroundColor: "#ff6167",
+                                    backgroundColor:  theme.customTheme9,
                                     borderRadius: "5px",
                                 }}
                             />
@@ -137,7 +139,7 @@ const Sidebar = ({ variant }) => {
                             display: { xs: "none", sm: "initial" },
                             fontSize: "12px",
                             fontFamily: "sans-serif",
-                            color: "#9e9e9e",
+                            color:  theme.customTheme8,
                             width: "174px",
                             marginLeft: "20px",
                             marginBottom: "14px",
@@ -155,11 +157,11 @@ const Sidebar = ({ variant }) => {
                             padding: "10px",
                             borderRadius: "8px",
                             transition: "all 0.2s ease-in-out",
-                            color: "#8676ff",
+                            color:  theme.customTheme2,
                         }}
                     >
                         <ListItemIcon sx={{ minWidth: "36px" }}>
-                            <key.icon sx={{ color: "#9e9e9e" }} />
+                            <key.icon sx={{ color:  theme.customTheme8 }} />
                         </ListItemIcon>
 
                         <ListItemText
@@ -172,7 +174,7 @@ const Sidebar = ({ variant }) => {
                                 margin: "0px",
                                 overflowX: "hidden",
                                 fontFamily: "sans-serif",
-                                color: "#9e9e9e",
+                                color:  theme.customTheme8,
                                 fontWeight: "Medium",
                                 whiteSpace: "nowrap",
                                 minWidth: "126px",
@@ -187,7 +189,7 @@ const Sidebar = ({ variant }) => {
                                     width: "auto",
                                     height: "21px",
                                     margin: "auto",
-                                    backgroundColor: "#ff6167",
+                                    backgroundColor:  theme.customTheme9,
                                     borderRadius: "5px",
                                 }}
                             />

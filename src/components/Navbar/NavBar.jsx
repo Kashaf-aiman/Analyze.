@@ -7,6 +7,7 @@ import {
   Toolbar,
   Typography,
   IconButton,
+  useTheme
 } from "@mui/material";
 import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
 import { FiSearch } from "react-icons/fi";
@@ -20,6 +21,7 @@ import { DrawerContext } from "../../App";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
+  const theme = useTheme();
   const { open, toggleDrawer } = React.useContext(DrawerContext);
   const [alignment, setAlignment] = React.useState("English");
 
@@ -46,7 +48,7 @@ const NavBar = () => {
             <IconButton
               size="large"
               edge="start"
-              sx={{ mr: 2, color: "#7d7d98" }}
+              sx={{ mr: 2, color:  theme.customTheme7 }}
               onClick={() => {
                 toggleDrawer(!open);
               }}
@@ -64,7 +66,7 @@ const NavBar = () => {
               justifyContent: "center",
               width: "80px",
               height: "40px",
-              backgroundColor: "#F0F0F0",
+              backgroundColor:  theme.customTheme10,
               borderRadius: "10px",
               fontWeight: "bold",
             }}
@@ -94,7 +96,7 @@ const NavBar = () => {
             }}
           >
             <IconButton
-              style={{ marginRight: "2px", backgroundColor: "#F0F0F0" }}
+              style={{ marginRight: "2px", backgroundColor:  theme.customTheme10 }}
             >
               <Badge
                 variant="dot"
@@ -103,8 +105,8 @@ const NavBar = () => {
                 sx={{
                   marginRight: "2px",
                   "& .MuiBadge-badge": {
-                    backgroundColor: "#ff6167",
-                    color: "#ff6167",
+                    backgroundColor:  theme.customTheme9,
+                    color:  theme.customTheme9,
                   },
                 }}
               >

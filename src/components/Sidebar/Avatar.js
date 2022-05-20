@@ -1,9 +1,10 @@
 import * as React from "react";
-import { Avatar, Divider, IconButton, Typography } from "@mui/material";
+import { Avatar, Divider, IconButton, Typography,useTheme } from "@mui/material";
 import Box from "@mui/material/Box";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 
 export default function SAvatar() {
+    const theme = useTheme();
     return (
         <Box
             sx={{
@@ -25,7 +26,7 @@ export default function SAvatar() {
                         sx={{
                             fontSize: "15px",
                             fontWeight: 600,
-                            color: "#383874",
+                            color:  theme.customTheme,
                             fontFamily: "sans-serif",
                         }}
                     >
@@ -37,7 +38,7 @@ export default function SAvatar() {
                         sx={{
                             fontFamily: "sans-serif",
                             fontSize: "13px",
-                            color: "#44b700",
+                            color:  theme.customTheme12,
                         }}
                     >
                         Sr. Manager

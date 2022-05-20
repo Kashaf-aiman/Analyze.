@@ -5,8 +5,11 @@ import { FiArrowUpRight, FiArrowDownRight } from "react-icons/fi";
 import Typography from "@mui/material/Typography";
 // import {CgChevronDoubleRight} from 'react-icons/cg';
 import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+import { useTheme } from "@mui/material";
+
 
 export const Cards = (props) => {
+    const theme = useTheme();
     return (
         <Grid item xs={12} md={6} lg={4}>
             <Box
@@ -34,14 +37,14 @@ export const Cards = (props) => {
                         <Typography
                             variant="h6"
                             component="span"
-                            sx={{ fontSize: "13px", color: "#a7a7c2" }}
+                            sx={{ fontSize: "13px", color:  theme.customTheme3 }}
                         >
                             {props.title}
                         </Typography>
                         <Typography
                             variant="h4"
                             component="h6"
-                            sx={{ fontSize: "26px", color: "#383874", fontWeight: "bold" }}
+                            sx={{ fontSize: "26px", color:  theme.customTheme, fontWeight: "bold" }}
                             gutterBottom
                         >
                             {props.value}
@@ -56,7 +59,7 @@ export const Cards = (props) => {
                                 component="span"
                                 sx={{
                                     fontSize: "13px",
-                                    color: props.status === "increase" ? "#29cea1" : "#ff708b",
+                                    color: props.status === "increase" ?  theme.customTheme4 :  theme.customTheme5,
                                 }}
                             >
                                 {props.percentage}
@@ -67,8 +70,8 @@ export const Cards = (props) => {
                     <Box>
                         <Box
                             sx={{
-                                color: props.status === "increase" ? "#29cea1" : "#ff708b",
-                                backgroundColor: "#f8f9fb",
+                                color: props.status === "increase" ?  theme.customTheme4 :  theme.customTheme5,
+                                backgroundColor:  theme.customTheme6,
                                 borderRadius: "5px",
                                 padding: "5px",
                             }}
@@ -90,12 +93,12 @@ export const Cards = (props) => {
                         alignItems: "center",
                         padding: "5px 15px",
                         transition: "all 0.3s ease-in-out",
-                        color: "#8676ff",
+                        color:  theme.customTheme2,
                         fontSize: "16px",
                         fontFamily: "sans-serif",
                         borderRadius: "5px",
                         "&:hover": {
-                            backgroundColor: "#8676ff",
+                            backgroundColor:  theme.customTheme2,
                             color: "white",
                         },
                     }}

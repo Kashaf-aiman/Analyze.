@@ -60,9 +60,9 @@ export const GraphData = [
 ];
 
 export const PieChartData = [
-    { name: 'E-Commerce', value: 1618, color: '#21cc9e', st: 180, ed: 90, inr: 70, otr: 106},
-    { name: 'Facebook', value: 808, color: '#8676ff', st: 90, ed: 45, inr: 72, otr: 104 },
-    { name: 'Instagram', value: 808, color: '#eff4f8', st: 45, ed: 0, inr: 74, otr: 101 },
+    { name: 'E-Commerce', value: 1618, color: '#21cc9e', st: 180, ed: 90, inr: 60, otr: 105},
+    { name: 'Facebook', value: 808, color: '#8676ff', st: 90, ed: 45, inr: 63, otr: 102 },
+    { name: 'Instagram', value: 808, color: '#eff4f8', st: 45, ed: 0,inr: 66, otr: 99 },
 ];
 export const OrderListData = [
     {
