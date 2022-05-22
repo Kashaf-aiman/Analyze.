@@ -10,11 +10,13 @@ export default function SAvatar() {
             sx={{
                 height: "auto",
                 width: "100%",
-                position: "absolute", left: "0", bottom: "0",
+                position: 'absolute',
+                left: "0px",
+                bottom: "6px",
             }}
         >
             <Divider />
-            <Box sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{display: "flex", alignItems: "center" }}>
                 <Avatar
                     alt=""
                     sx={{ marginLeft: "20px", width: "38px", height: "38px" }}

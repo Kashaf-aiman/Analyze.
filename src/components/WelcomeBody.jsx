@@ -34,7 +34,7 @@ const theme = useTheme();
                     disableRipple
                     disableElevation
                     endIcon={<BiShareAlt />}
-                    sx={{ textTransform: 'capitalize', borderRadius: '4px', marginRight: '10px', color: '#8676ff', borderColor: '#8676ff', padding: "5px 20px" }}
+                    sx={{ textTransform: 'capitalize', borderRadius: '4px', marginRight: '14px', color: '#8676ff', borderColor: '#8676ff', padding: "5px 20px" }}
                 > Share</Button>
                 <Button
                     variant="contained"

@@ -98,7 +98,7 @@ export const Cards = (props) => {
                         fontFamily: "sans-serif",
                         borderRadius: "5px",
                         "&:hover": {
-                            backgroundColor:  theme.customTheme2,
+                            backgroundColor: theme.customTheme2,
                             color: "white",
                         },
                     }}
